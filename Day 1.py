@@ -8,7 +8,7 @@ windows = {}
 for count, measurement in enumerate(measurements[1::]):
     if measurement > measurements[count]:
         total += 1
-print('Part 1 answer:', total)
+print('Part 1 Answer:', total)
 
 total = 0
 
@@ -22,4 +22,4 @@ for count in range(len(measurements)):
 for i in range(1,len(windows)):
     if windows[i] > windows[i-1]:
         total += 1
-print('Part 2 answer:', total)
+print('Part 2 Answer:', total)
