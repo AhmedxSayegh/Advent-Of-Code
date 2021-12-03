@@ -21,10 +21,8 @@ print('Part 1 Answer:', binary_to_dicimal(gamma_rate)*binary_to_dicimal(epsilon_
 
 # Part 2
 def ox_rating(report, index):
-    global ox
-    if len(report) == 1:
-        ox = report[0]
-        return
+    if len(report) < 2:
+        return report[0]
     else:
         zero_counter = 0
         one_counter = 0
@@ -38,12 +36,10 @@ def ox_rating(report, index):
         else:
             ox_counter = list(filter(lambda xreport: xreport[index] == '0', report))
         index += 1
-        ox_rating(ox_counter, index)
+        return ox_rating(ox_counter, index)
 def co2_rating(report, index):
-    global co2
-    if len(report) == 1:
-        co2 = report[0]
-        return
+    if len(report) < 2:
+        return report[0]
     else:
         zero_counter = 0
         one_counter = 0
@@ -57,7 +53,5 @@ def co2_rating(report, index):
         else:
             co2_counter = list(filter(lambda xreport: xreport[index] == '0', report))
         index += 1
-        co2_rating(co2_counter, index)
-ox_rating(content, 0)
-co2_rating(content, 0)
-print('Part 2 Answer:', binary_to_dicimal(ox)*binary_to_dicimal(co2))
+        return co2_rating(co2_counter, index)
+print('Part 2 Answer:', binary_to_dicimal(ox_rating(content, 0))*binary_to_dicimal(co2_rating(content, 0)))
