@@ -1,4 +1,4 @@
-content = open('Text.txt').read().split('\n')
+content = open('Input.txt').read().split('\n')
 
 # Part 1
 ver = 0
