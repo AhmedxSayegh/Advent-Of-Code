@@ -1,4 +1,4 @@
-content = open('Text.txt').read().split('\n')
+content = open('Input.txt').read().split('\n')
 measurements = [int(i) for i in content]
 total = 0
 window = 0
