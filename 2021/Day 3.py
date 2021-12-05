@@ -1,4 +1,4 @@
-content = open('Text.txt').read().split('\n')
+content = open('Input.txt').read().split('\n')
 
 def binary_to_dicimal(num):
     dicimal = 0
