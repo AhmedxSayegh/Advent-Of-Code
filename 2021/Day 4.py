@@ -1,4 +1,4 @@
-content = open('Text.txt').read().split('\n\n')
+content = open('Input.txt').read().split('\n\n')
 
 def table_checker(num, table, *arg):
     cycle = arg[0]
