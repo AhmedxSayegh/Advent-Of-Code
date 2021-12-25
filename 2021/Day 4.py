@@ -1,6 +1,7 @@
 content = open('Input.txt').read().split('\n\n')
 
 
+#Used By Both Parts
 def table_checker(num, table, *arg):
     cycle = arg[0]
     table_id = arg[1]
@@ -64,7 +65,6 @@ for num in content[0].split(','):
             answer_table = [x for x in bingo_tables_copy]
             answer_num = int(num)
             bingo_tables_copy[answer[-1]] = []
-
 answer = 0
 for table in answer_table:
     for line in table:
