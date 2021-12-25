@@ -11,7 +11,7 @@ for instruction in content:
         ver += value
     else:
         ver -= value
-print('Part 1 Answer:', ver*hor)
+print('Part 1 Answer:', ver * hor)
 
 # Part 2
 ver = 0
@@ -26,4 +26,4 @@ for instruction in content:
         aim += value
     else:
         aim -= value
-print('Part 2 Answer:', ver*hor)
+print('Part 2 Answer:', ver * hor)
