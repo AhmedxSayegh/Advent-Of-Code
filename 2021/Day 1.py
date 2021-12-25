@@ -16,10 +16,10 @@ total = 0
 for count in range(len(measurements)):
     if count + 3 > len(measurements):
         break
-    windows[window] = sum(measurements[count:count+3])
+    windows[window] = sum(measurements[count:count + 3])
     window += 1
 
-for i in range(1,len(windows)):
-    if windows[i] > windows[i-1]:
+for i in range(1, len(windows)):
+    if windows[i] > windows[i - 1]:
         total += 1
 print('Part 2 Answer:', total)
