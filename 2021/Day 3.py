@@ -1,6 +1,7 @@
 content = open('Input.txt').read().split('\n')
 
 
+# Used By Both Parts
 def binary_to_dicimal(num):
     dicimal = 0
     for count, digit in enumerate(num):
