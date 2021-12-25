@@ -1,7 +1,6 @@
 content = open('Input.txt').read().split('\n')
 measurements = [int(i) for i in content]
 total = 0
-window = 0
 windows = {}
 
 # Part 1
@@ -10,9 +9,10 @@ for count, measurement in enumerate(measurements[1::]):
         total += 1
 print('Part 1 Answer:', total)
 
-total = 0
 
 # Part 2
+total = 0
+window = 0
 for count in range(len(measurements)):
     if count + 3 > len(measurements):
         break
