@@ -1,5 +1,6 @@
 content = open('Input.txt').read().split('\n\n')
 
+
 def table_checker(num, table, *arg):
     cycle = arg[0]
     table_id = arg[1]
@@ -23,6 +24,7 @@ def table_checker(num, table, *arg):
             else:
                 return [num, table, table_id]
 
+
 bingo_tables = []
 for table in content[1:]:
     table_list = []
@@ -42,7 +44,7 @@ for num in content[0].split(','):
             answer_list = []
             for row in answer[1]:
                 answer_list.append(sum(list(filter(lambda x: str(x).isdigit(), row))))
-            print('Part 1 Answer:', answer[0]*sum(answer_list))
+            print('Part 1 Answer:', answer[0] * sum(answer_list))
             breaker += 1
             break
 
@@ -67,4 +69,4 @@ answer = 0
 for table in answer_table:
     for line in table:
         answer += sum((list(filter(lambda x: str(x).isdigit(), line))))
-print('Part 2 Answer:', answer*answer_num)
+print('Part 2 Answer:', answer * answer_num)
