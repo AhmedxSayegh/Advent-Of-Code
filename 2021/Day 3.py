@@ -21,7 +21,6 @@ for x in range(len(content[0])):
 epsilon_rate = ''.join(list(map(lambda x: '1' if x is '0' else '0', gamma_rate)))
 print('Part 1 Answer:', binary_to_dicimal(gamma_rate) * binary_to_dicimal(epsilon_rate))
 
-
 # Part 2
 def ox_rating(report, index):
     if len(report) < 2:
