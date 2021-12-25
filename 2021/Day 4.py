@@ -1,7 +1,7 @@
 content = open('Input.txt').read().split('\n\n')
 
 
-#Used By Both Parts
+# Used By Both Parts
 def table_checker(num, table, *arg):
     cycle = arg[0]
     table_id = arg[1]
