@@ -41,7 +41,7 @@ for num in content[0].split(','):
         break
     for table in bingo_tables:
         answer = table_checker(int(num), table, 0, 0)
-        if answer != None:
+        if answer is not None:
             answer_list = []
             for row in answer[1]:
                 answer_list.append(sum(list(filter(lambda x: str(x).isdigit(), row))))
@@ -61,12 +61,14 @@ for num in content[0].split(','):
             breaker += 1
             break
         answer = table_checker(int(num), table, 1, table_id)
-        if answer != None:
+        if answer is not None:
             answer_table = [x for x in bingo_tables_copy]
             answer_num = int(num)
             bingo_tables_copy[answer[-1]] = []
 answer = 0
+# noinspection PyUnboundLocalVariable
 for table in answer_table:
     for line in table:
         answer += sum((list(filter(lambda x: str(x).isdigit(), line))))
+# noinspection PyUnboundLocalVariable
 print('Part 2 Answer:', answer * answer_num)
