@@ -19,7 +19,7 @@ for instruction in content:
     xy1.append([int(instruction.split(',')[0]), int(instruction.split()[0].split(',')[-1])])
     xy2.append([int(instruction.split()[-1].split(',')[0]), int(instruction.split(',')[-1])])
 grid_size = max(max(max(xy1[i]) for i in range(len(content))), max(max(xy2[i]) for i in range(len(content))))
-grid = [[0 for i in range(grid_size + 1)] for i in range(grid_size + 1)]
+grid = [[0 for x in range(grid_size + 1)] for y in range(grid_size + 1)]
 
 # Part 1
 for i in range(len(xy1)):
