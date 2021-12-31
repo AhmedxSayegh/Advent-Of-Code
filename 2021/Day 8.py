@@ -9,7 +9,6 @@ print('Part 1 Answer:', len(list(filter(lambda x: len(x) == 2 or len(x) == 3 or 
 # Part 2
 def decoder(output):
     output_num = ''
-    decoded = ''
     if len(output) == 2:
         return '1'
     elif len(output) == 3:
@@ -45,8 +44,8 @@ total = 0
 for index, line in enumerate(content):
     inputs[index] = []
     encoder = {}
-    for input in line.split('|')[0].split():
-        inputs[index].append(input)
+    for data in line.split('|')[0].split():
+        inputs[index].append(data)
     zero_six_nine = [x for y in list(filter(lambda x: len(x) == 6, inputs[index])) for x in y]
     zero_six_nine = list(set(filter(lambda x: zero_six_nine.count(x) < 3, zero_six_nine)))
     two_three_five = [x for y in list(filter(lambda x: len(x) == 5, inputs[index])) for x in y]
