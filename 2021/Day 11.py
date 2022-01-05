@@ -45,10 +45,10 @@ around = [lambda x, y: [x + 1, y] if x + 1 <= len(content[0]) - 1 else False,
           lambda x, y: [x - 1, y - 1] if x - 1 >= 0 and y - 1 >= 0 else False,
           lambda x, y: [x, y - 1] if y - 1 >= 0 else False,
           lambda x, y: [x + 1, y - 1] if x + 1 <= len(content[0]) - 1 and y - 1 >= 0 else False]
+flashes = []
 
 # Part 1
 octopuses = [list(line) for line in content]
-flashes = []
 flashes_total = 0
 for y in range(len(octopuses)):
     for x in range(len(octopuses[0])):
