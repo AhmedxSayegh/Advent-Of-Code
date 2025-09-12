@@ -66,9 +66,8 @@ for num in content[0].split(','):
             answer_num = int(num)
             bingo_tables_copy[answer[-1]] = []
 answer = 0
-# noinspection PyUnboundLocalVariable
 for table in answer_table:
     for line in table:
         answer += sum((list(filter(lambda x: str(x).isdigit(), line))))
-# noinspection PyUnboundLocalVariable
 print('Part 2 Answer:', answer * answer_num)
+
